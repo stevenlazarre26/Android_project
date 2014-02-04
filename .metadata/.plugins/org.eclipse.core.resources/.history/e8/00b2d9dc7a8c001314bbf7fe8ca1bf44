@@ -1,0 +1,14 @@
+import java.io.*;
+import java.util.*;
+
+public class main {
+
+	private Scanner x;
+	
+	public void openFile (){
+		try {
+			x= new Scanner(new File ("data.txt"));
+			
+		}
+	}
+}
