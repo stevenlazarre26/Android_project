@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
+	<item value="3" key="TypeHierarchyViewPart.orientation"/>
+	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
 	<section name="DialogBounds_OverrideMethodDialog">
 		<item value="527" key="DIALOG_WIDTH"/>
 		<item value="74" key="DIALOG_Y_ORIGIN"/>

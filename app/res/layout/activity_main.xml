@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:text="Change Text"
         android:onClick="ButtonOnClick"
+        android:layout_gravity="center"
 	    />
     
     <TextView

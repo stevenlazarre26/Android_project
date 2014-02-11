@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="java.awt.Container"/>
 <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
 </qualifiedTypeNameHistroy>

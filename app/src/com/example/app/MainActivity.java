@@ -23,11 +23,13 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-		final Button bt=(Button) findViewById(R.id.show); 
+		
+        final Button bt=(Button) findViewById(R.id.show); 
+		
 		et = (EditText) findViewById(R.id.input_text);
-	        tv = (TextView) findViewById(R.id.output_text);
+	    tv = (TextView) findViewById(R.id.output_text);
 	  
-	     et.addTextChangedListener(new TextWatcher(){
+	    et.addTextChangedListener(new TextWatcher(){
 				@Override
 				public void afterTextChanged(Editable s) {
 
@@ -54,8 +56,7 @@ public class MainActivity extends Activity {
 
 	        
 	      
-}
-
+	}
 }
     
 
