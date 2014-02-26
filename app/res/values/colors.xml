@@ -2,5 +2,7 @@
 <resources>
     <color name="text_color">#FFFFFF</color>
     <color name="back_color">#000000</color>
+    <color name="btn_color">#CE0071</color>
+    <color name="btn_color_atn">#00A875</color>
     
 </resources>

@@ -1,8 +1,9 @@
+
 package com.example.app;
 
-import android.R;
 import android.app.Activity;
 import android.os.Bundle;
+import com.example.app.R;
 
 public class Activitythree extends Activity {
 
@@ -12,4 +13,5 @@ public class Activitythree extends Activity {
 		super.onCreate(savedInstanceState);
 	setContentView(R.layout.activity_three);
 }
+
 }

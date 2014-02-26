@@ -1,3 +1,4 @@
+
 package com.example.app;
 
 import android.app.Activity;
@@ -6,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import com.example.app.R;
+
 
 public class Activitytwo extends Activity {
 	

@@ -1,0 +1,30 @@
+package com.example.app;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+
+public class Setting extends ListActivity implements OnCheckedChangeListener{
+
+	CheckBox cb;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.settings);
+		cb=(CheckBox)findViewById(R.id.cbOption);
+		cb.setOnCheckedChangeListener(this);
+	}
+
+	@Override
+	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+}
+
