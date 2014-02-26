@@ -1,0 +1,7 @@
+package kiloboltGame;
+
+import java.applet.Applet;
+
+public class kiloboltGame extends Applet{
+
+}
