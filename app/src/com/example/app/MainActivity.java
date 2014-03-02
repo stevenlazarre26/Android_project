@@ -4,7 +4,10 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import com.example.app.R;
+
+
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -27,15 +30,21 @@ public class MainActivity extends Activity {
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+	 public boolean onCreateOptionsMenu(Menu menu) {
+	 super.onCreateOptionsMenu(menu); 
+	 getMenuInflater().inflate(R.menu.main, menu);
+	 return true;
+	 
+	 }
+	 
 
-		return true;
-	}
-	/*
-	 * public boolean onCreateOptionsMenu(Menu menu) {
-	 * super.onCreateOptionsMenu(menu); menu.add("Settings") .setIntent(new
-	 * Intent(this,Setting.class)); return true; }
-	 */
+public boolean onOptionItemSelected(MenuItem item) {
+	if(item.getItemId()==R.id.action_settings){
+		Intent intent = new Intent(this,Setting.class);
+		startActivity(intent);
+	}			
+	
+	return super.onOptionsItemSelected(item);
+
+}
 }

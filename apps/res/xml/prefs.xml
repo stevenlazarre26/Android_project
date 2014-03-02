@@ -3,7 +3,7 @@
     <CheckBoxPreference
         android:title="Checkbox"
         android:key="checkbox"
-        android:defaultValue="false"
+        android:defaultValue="true"
         android:summary="check this box"
         android:id="@+id/here"
         />

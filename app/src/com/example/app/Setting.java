@@ -11,47 +11,29 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import com.example.app.R;
 
-public class Setting extends PreferenceActivity implements OnCheckedChangeListener{
+public class Setting extends PreferenceActivity{
 	CheckBox cb;
 	CheckBox cb2;
 	SharedPreferences sp;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-	
+	super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.settings);
 		
-		super.onCreate(savedInstanceState);
+		
 		//sp= PreferenceManager.getDefaultSharedPreferences(this);
-		  cb=(CheckBox)findViewById(R.id.cbOption);
-			cb.setOnCheckedChangeListener(this);
-			 cb2=(CheckBox)findViewById(R.id.cbOption2);
-				cb2.setOnCheckedChangeListener(this);
+		//  cb=(CheckBox)findViewById(R.id.cbOption);
+			//cb.setOnCheckedChangeListener(this);
+			 //cb2=(CheckBox)findViewById(R.id.cbOption2);
+				//cb2.setOnCheckedChangeListener(this);
 				//cb.setChecked(sp.getBoolean("checked",cb.isChecked()));
 				//cb2.setChecked(sp.getBoolean("checked",cb2.isChecked()));
 				
 	
 	}
-/*
-	private void loadPrefs(){
-			
-	if(cbValue){
-		cb.setChecked(true);
 	
 	
-	}else{
-		cb.setChecked(false);
-	}
-	}
-	*/
-	/*
-	private void savePrefs(String key,boolean value){
-
-		Editor edit= sp.edit();
-		edit.putBoolean(key,value);
-		edit.commit();
-	}
-	*/
-	@Override
+/*	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		// TODO Auto-generated method stub
 		
@@ -66,5 +48,5 @@ public class Setting extends PreferenceActivity implements OnCheckedChangeListen
         	startActivity(sintent);
         	finish();
 			}  
-}
+}*/
 }

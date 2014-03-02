@@ -17,20 +17,25 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		 super.onCreateOptionsMenu(menu); 
+		 //menu.add("Settings") ;
+		// .setIntent(new Intent("com.example.Prefs")); 
+		
+		
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+		 return true;
+		
 	}
 
 	public boolean onOptionItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-
-		case R.id.action_settings:
-Intent i= new Intent (MainActivity.this,Prefs.class);
+		if(item.getItemId()!=R.id.action_settings){
+Intent i= new Intent ("com.example.Prefs");
 startActivity(i);			
-break;
 		}
-		return false;
+		return super.onOptionsItemSelected(item);
 
 	}
+
 }
+	
