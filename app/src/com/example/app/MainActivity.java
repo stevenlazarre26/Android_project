@@ -1,15 +1,22 @@
 package com.example.app;
 
+import java.text.DateFormat;
+import java.util.Date;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+
 import com.example.app.R;
+
+
 
 
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -18,7 +25,9 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
-
+		setContentView(R.layout.activity_main);
+		
+	
 		final Button bt = (Button) findViewById(R.id.show);
 
 		bt.setOnClickListener(new Button.OnClickListener() {

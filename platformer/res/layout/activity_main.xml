@@ -26,5 +26,22 @@
         android:layout_gravity="center"
         android:onClick="ButtonOnClick"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help"
+        android:id="@+id/btn2"
+        android:layout_gravity="center"
+        android:onClick="ButtonOnClick"
+        />
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        android:id="@+id/btn3"
+        android:layout_gravity="center"
+        android:onClick="ButtonOnClick"
+        />
+    
 
 </LinearLayout>

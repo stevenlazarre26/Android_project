@@ -5,7 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.view.Window;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
@@ -13,9 +13,10 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-	
-	final Button bt=(Button)findViewById(R.id.btn1);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		this.setContentView(R.layout.activity_main);
+		
+		final Button bt=(Button)findViewById(R.id.btn1);
 	
 		bt.setOnClickListener(new Button.OnClickListener(){
 			public void onClick(View v) {
@@ -23,6 +24,23 @@ public class MainActivity extends Activity {
 				startActivity(intent1);
 			}
 		});
+		
+		final Button bt2=(Button)findViewById(R.id.btn2);
+		
+		bt2.setOnClickListener(new Button.OnClickListener(){
+			public void onClick(View v) {
+				Intent intent2 = new Intent(MainActivity.this,Help.class);
+				startActivity(intent2);
+			}
+		});	
+
+		final Button bt3=(Button)findViewById(R.id.btn3);
+		
+		bt3.setOnClickListener(new Button.OnClickListener(){
+			public void onClick(View v) {
+				finish();
+			}
+		});	
 	}
 
 	

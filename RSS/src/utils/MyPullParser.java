@@ -1,8 +1,6 @@
 package utils;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -10,16 +8,27 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
+import com.example.rss.R;
+
+import android.app.Activity;
+import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 /**
  * This code is loosely based on the pull parser code from:
  * http://developer.android.com/reference/org/xmlpull/v1/XmlPullParser.html
  * @author josh
  *
  */
-public class MyPullParser {
+public class MyPullParser{
 	private ArrayList<RssItem> items = new ArrayList<RssItem>();
+	public ArrayList<String> list = new ArrayList<String>();
 	private RssItem currentItem = null;
+
 	public void parse(String url) throws XmlPullParserException, IOException{
 		XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
 		factory.setNamespaceAware(true);
@@ -55,16 +64,40 @@ public class MyPullParser {
 		Log.i("MyPullParser","End document");
 		Log.i("MyPullParser","We received: "+items.size());
 	}
+	
+	
 	@Override
 	public String toString(){
 		String prettyPrint = "";
-		for(int i = 0; i < items.size(); i++){
+		//String des= "";
+		 
+		//ListView listview = (ListView) findViewById(R.id.listView1);
+		//final ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i < items.size(); ++i) {
+        	prettyPrint = prettyPrint+
+					"\n"+
+					list.add(items.get(i).title);
+        }
+        /*final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+            android.R.layout.simple_list_item_1, list);
+        listview.setAdapter(adapter);
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				String itemClicked = (String) parent.getItemAtPosition(position);
+				
+			}
+		});
+		/*
+        for(int i = 0; i <items.size(); i++){
 			prettyPrint = prettyPrint+
 					"\n"+
-					"---title: "+items.get(i).title+"\n"+
-					"---description: "+items.get(i).description;
+					items.get(i).title;
+					//des=items.get(i).description;
 		}
+	*/
 		return prettyPrint;
+        
 	}
 	public ArrayList<RssItem> getItems(){
 		return items;
